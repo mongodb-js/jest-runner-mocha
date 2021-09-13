@@ -21,12 +21,12 @@ var setupCollectCoverage = function setupCollectCoverage(_ref) {
       useInlineSourceMaps: false,
       exclude: coveragePathIgnorePatterns
     }]],
-    ignore: function ignore(filename) {
+    ignore: [function (filename) {
       return (/node_modules/.test(filename) || coveragePathIgnorePatterns.some(function (pattern) {
           return minimatch(filename, pattern);
         })
       );
-    },
+    }],
     babelrc: allowBabelRc,
     // compact: true,
     retainLines: true,
