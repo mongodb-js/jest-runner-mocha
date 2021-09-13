@@ -13,7 +13,7 @@ var setupCollectCoverage = function setupCollectCoverage(_ref) {
   }
 
   // eslint-disable-next-line import/no-dynamic-require, global-require
-  var register = require('babel-register');
+  var register = require('@babel/register');
   register({
     plugins: [['babel-plugin-istanbul', {
       // files outside `cwd` will not be instrumented

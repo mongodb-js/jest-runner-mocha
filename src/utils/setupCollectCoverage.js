@@ -11,7 +11,7 @@ const setupCollectCoverage = ({
   }
 
   // eslint-disable-next-line import/no-dynamic-require, global-require
-  const register = require('babel-register');
+  const register = require('@babel/register');
   register({
     plugins: [
       [
