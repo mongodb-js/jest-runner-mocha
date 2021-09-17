@@ -28,6 +28,7 @@ var setupCollectCoverage = function setupCollectCoverage(_ref) {
       );
     }],
     babelrc: allowBabelRc,
+    babelrcRoots: [rootDir, `${rootDir}/test/*`],
     // compact: true,
     retainLines: true,
     sourceMaps: 'inline'

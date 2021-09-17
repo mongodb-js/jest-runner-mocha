@@ -33,6 +33,10 @@ const setupCollectCoverage = ({
       }
     ],
     babelrc: allowBabelRc,
+    babelrcRoots: [
+      rootDir,
+      `${rootDir}/test/*`,
+    ],
     // compact: true,
     retainLines: true,
     sourceMaps: 'inline',
