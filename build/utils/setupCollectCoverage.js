@@ -17,7 +17,7 @@ var setupCollectCoverage = function setupCollectCoverage(_ref) {
   register({
     plugins: [['babel-plugin-istanbul', {
       // files outside `cwd` will not be instrumented
-      cwd: rootDir,
+      cwd: './',
       useInlineSourceMaps: false,
       exclude: coveragePathIgnorePatterns
     }]],
@@ -28,7 +28,6 @@ var setupCollectCoverage = function setupCollectCoverage(_ref) {
       );
     }],
     babelrc: allowBabelRc,
-    babelrcRoots: [rootDir, `${rootDir}/test/*`],
     // compact: true,
     retainLines: true,
     sourceMaps: 'inline'

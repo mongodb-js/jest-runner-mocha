@@ -18,7 +18,7 @@ const setupCollectCoverage = ({
         'babel-plugin-istanbul',
         {
           // files outside `cwd` will not be instrumented
-          cwd: rootDir,
+          cwd: './',
           useInlineSourceMaps: false,
           exclude: coveragePathIgnorePatterns,
         },
@@ -33,10 +33,6 @@ const setupCollectCoverage = ({
       }
     ],
     babelrc: allowBabelRc,
-    babelrcRoots: [
-      rootDir,
-      `${rootDir}/test/*`,
-    ],
     // compact: true,
     retainLines: true,
     sourceMaps: 'inline',
