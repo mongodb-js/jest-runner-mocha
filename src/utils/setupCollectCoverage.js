@@ -11,7 +11,7 @@ const setupCollectCoverage = ({
   }
 
   // eslint-disable-next-line import/no-dynamic-require, global-require
-  const register = require('babel-register');
+  const register = require('@babel/register');
   register({
     plugins: [
       [
@@ -24,12 +24,14 @@ const setupCollectCoverage = ({
         },
       ],
     ],
-    ignore: filename => {
-      return (
-        /node_modules/.test(filename) ||
-        coveragePathIgnorePatterns.some(pattern => minimatch(filename, pattern))
-      );
-    },
+    ignore: [
+      filename => {
+        return (
+          /node_modules/.test(filename) ||
+          coveragePathIgnorePatterns.some(pattern => minimatch(filename, pattern))
+        );
+      }
+    ],
     babelrc: allowBabelRc,
     // compact: true,
     retainLines: true,
