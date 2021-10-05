@@ -1,7 +1,7 @@
 {
   "name": "jest-runner-mocha",
   "version": "0.7.0",
-  "main": "build/index.js",
+  "main": "src/index.js",
   "author": "Rogelio Guzman <rogelioguzmanh@gmail.com>",
   "description": "An experimental Mocha runner for Jest",
   "license": "MIT",
@@ -10,16 +10,11 @@
     "url": "https://github.com/rogeliog/jest-runner-mocha.git"
   },
   "homepage": "https://github.com/rogeliog/jest-runner-mocha",
-  "files": [
-    "build/"
-  ],
   "scripts": {
     "test": "jest",
     "lint": "eslint .",
     "watch": "babel src -w --ignore **/*.test.js,integration -d build",
     "build": "babel src --ignore **/*.test.js,integration -d build",
-    "prepublish": "yarn build",
-    "prepare": "yarn build",
     "format": "prettier --single-quote --trailing-comma all --write \"!(build)/**/*.js\""
   },
   "dependencies": {
