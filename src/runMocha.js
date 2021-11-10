@@ -1,6 +1,5 @@
 const Mocha = require('mocha');
 const toTestResult = require('./utils/toTestResult');
-const setupCollectCoverage = require('./utils/setupCollectCoverage');
 const getMochaOptions = require('./utils/getMochaOptions');
 
 const runMocha = ({ config, testPath, globalConfig }) => {
@@ -54,13 +53,7 @@ const runMocha = ({ config, testPath, globalConfig }) => {
       require(mochaOptions.compiler);
     }
 
-    setupCollectCoverage({
-      filename: testPath,
-      rootDir: config.rootDir,
-      collectCoverage: globalConfig.collectCoverage,
-      coveragePathIgnorePatterns: config.coveragePathIgnorePatterns,
-      allowBabelRc: coverageOptions.useBabelRc,
-    });
+    // removed setupCollectCoverage section as that's handled elsewhere now
 
     if (mochaOptions.file) {
       mochaOptions.file.forEach(file => mocha.addFile(file));
