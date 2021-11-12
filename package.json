@@ -19,15 +19,13 @@
   },
   "dependencies": {
     "@babel/core": "^7.15.5",
-    "@babel/register": "^7.15.3",
-    "babel-plugin-istanbul": "4.1.4",
     "cosmiconfig": "^3.1.0",
+    "create-jest-runner": "0.4.1",
     "lodash": "4.17.4",
     "minimatch": "3.0.4",
     "mocha": "3.5.0",
     "pify": "3.0.0",
-    "throat": "4.1.0",
-    "worker-farm": "1.5.0"
+    "throat": "4.1.0"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
